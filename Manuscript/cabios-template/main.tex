@@ -37,23 +37,41 @@ online.}
 
 \section{Introduction}
 
+% Why phylogenetic corrections:
+% MCMCglmm \cite{MCMCglmm}.
+% But the problem is that there can be more than one phylogenetic solution
+
+% Why more than one tree:
+% Disagreement between trees \cite{meredithimpacts2011} vs \cite{O'Leary08022013}.
+% Hard to solve trees \cite{Tarver01022016} and \cite{Romiguier01092013}.
+% MCMC posterior distributions \cite{Jetz2012}.
+% Therefore it might be useful to take that into account in comparative methods
+
+% We propose to use more than one tree in phylogenetic comparative methods to take into account eventual blur in phylogenetic signal
+% The idea is that for well supported clades with low variable branch length, the phylo signal should not change.
+% However, we allow it to change in parts of the tree that are not well supported with high variable branch lengths.
+
+% This method was used in \cite{Healy2014, Healy2015} on MCMCglmm \cite{MCMCglmm} (but criticised by \cite{Rabosky2015}.)
+% Here we propose a generalisation of this method in an R package called mulTree (MULtiple phylogenetic TREEs) that is a wrapper for compartive methods using multiple phylogenetic trees.
+
+
 %\enlargethispage{12pt}
 
 \section{Approach}
-
-
+% We propose a new class of objects: the mulTree class that contains both the trees, the data to analyse and the formula that can be fed to the general mulTree function.
+% This function can intake arguments allowing to perform comparitive methods using all the trees in the mulTree object:
+    %PIC: 
+    %PGLS:
+    %MCMCglmm: because this later is computationally heavy, we propose a coding architecture that allows the MCMCglmm to be stored out of the R memory and printed as mulTree files.
 
 \begin{methods}
 \section{Methods}
-
+% This is how we do it
 \end{methods}
 
 
 \section{Discussion}
-
-
-
-
+% This is why it's cool!
 
 
 
@@ -63,9 +81,6 @@ online.}
 %     as it may ignore the figures.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 
 
 
@@ -84,7 +99,7 @@ This work has been supported by the... Text Text  Text Text.\vspace*{-12pt}
 %\bibliographystyle{achemnat}
 %\bibliographystyle{plainnat}
 %\bibliographystyle{abbrv}
-%\bibliographystyle{bioinformatics}
+\bibliographystyle{bioinformatics}
 %
 %\bibliographystyle{plain}
 %
